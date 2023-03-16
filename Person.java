@@ -1,7 +1,7 @@
 package Test;
 
 public class Person {
-
+    
   /* 특별한 이유가 없는 경우 변수는 private을 통해 외부에 공개하지 않는다
    * member variable을 클래서 외부에서 접근해야 한다면 그를 위한
    * method를 public으로 구현한다
@@ -24,6 +24,12 @@ public class Person {
    * 접근제어자가 명시되지 않은 경우 default 접근제어자이다
    * default 접근제어자가 명시도니 member는 그 클래스가 속한 패키지
    * 내부 클래스에서 사용 가능하다
+   */
+  /* 멤버 변수를 private으로 설정하는 이유
+   * 1. 잘못된 값을 설정하는 것을 막아줄 필요가 있다.
+   * 2. 읽기 전용 멤버변수로 만들 수 있다
+   * 클래스 소스코드를 업그레이드할 경우, 그 클래스를 사용하는 
+   * 다른 코드에 미치는 영향을 최소화 할 수 있다
    */
   private String name;
   private int age;
